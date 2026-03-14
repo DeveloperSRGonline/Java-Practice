@@ -7,7 +7,7 @@ class Demo {
         
         // loop through the array
         for (String car : cars) {
-            System.out.println(car);
+            System.out.println(car); 
         }
     }
 }
