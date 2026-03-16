@@ -1,18 +1,22 @@
+
 import javax.swing.*;
 
-public class JTableExample {
-    public static void main(String[] args) {
-        JFrame f = new JFrame("JTable Example");
-        String column[] = { "ID", "Name", "Course" };
-        String data[][] = {
-                { "1", "Sarika", "MCA" }, { "2", "Manthan", "B.Tech" }, { "3", "Kartik", "M.Tech" }
+class JTableExample {
 
+    public static void main(String args[]) {
+        JFrame f = new JFrame();
+        String data[][] = {
+            {"1", "Amit", "25000"},
+            {"2", "Ravi", "30000"},
+            {"3", "Neha", "28000"},
+            {"4", "Kiran", "32000"},
+            {"5", "Pooja", "29000"}
         };
-        JTable table = new JTable(data, column);
-        JScrollPane sp = new JScrollPane(table);
+        String column[] = {"Emp No", "Name", "Salary"};
+        JTable jt = new JTable(data, column);
+        JScrollPane sp = new JScrollPane(jt);
         f.add(sp);
-        f.setSize(400, 300);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setSize(300, 200);
         f.setVisible(true);
     }
 }
