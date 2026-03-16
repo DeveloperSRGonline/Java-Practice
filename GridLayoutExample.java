@@ -1,21 +1,23 @@
+import java.awt.*;
 import javax.swing.*;
-class JTableExample
-{
-public static void main(String args[])
-{
- JFrame f = new JFrame();
- String data[][]={
- {"1","Amit","25000"},
- {"2","Ravi","30000"},
- {"3","Neha","28000"},
- {"4","Kiran","32000"},
- {"5","Pooja","29000"}
- };
- String column[]={"Emp No","Name","Salary"};
- JTable jt = new JTable(data,column);
- JScrollPane sp = new JScrollPane(jt);
- f.add(sp);
- f.setSize(300,200);
- f.setVisible(true);
-}
+
+public class GridLayoutExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Grid Layout Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(3, 2, 10, 10));
+
+        panel.add(new JButton("Button 1"));
+        panel.add(new JTextField(10));
+        panel.add(new JRadioButton("Radio Button 1"));
+        panel.add(new JCheckBox("Check Box 1"));
+        panel.add(new JLabel("Label 1"));
+        panel.add(new JTextField(10));
+
+        frame.add(panel);
+        frame.pack();
+        frame.setVisible(true);
+    }
 }
