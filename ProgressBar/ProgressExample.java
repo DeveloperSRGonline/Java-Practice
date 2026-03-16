@@ -12,3 +12,13 @@ public class ProgressExample {
         f.setVisible(true);
     }
 }
+
+/*
+JFrame
+  |
+  |---- JProgressBar
+            |
+            |---- Minimum Value
+            |---- Maximum Value
+            |---- Current Value
+*/
