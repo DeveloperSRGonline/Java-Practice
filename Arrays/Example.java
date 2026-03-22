@@ -1,20 +1,28 @@
 // Q.A program to calclate avarage of different ages.
+
 class Example {
 
     public static void main(String args[]) {
-        int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};
-        float avg,sum = 0;
+        // An array storing different ages
 
+        int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};
+
+        float avg, sum = 0;
+
+// Get the length of the array
         int length = ages.length;
 
+// Loop through the elements of the array
+        for (int age : ages) {
 
-        for(int age:ages)
-        {
-            sum+=age;
+            sum += age;
+
         }
 
-        avg = sum/length;
+// Calculate the average by dividing the sum by the length
+        avg = sum / length;
 
-        System.out.println("The average age is : " + avg);
+// Print the average
+        System.out.println("The average age is: " + avg);
     }
 }
